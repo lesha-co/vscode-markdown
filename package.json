@@ -26,7 +26,7 @@
         "onLanguage:markdown",
         "workspaceContains:README.md"
     ],
-    "main": "./dist/extension",
+    "main": "./out/extension",
     "contributes": {
         "commands": [
             {
@@ -381,8 +381,8 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "webpack --mode production",
-        "compile": "webpack --mode none",
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./",
         "watch": "webpack --mode none --watch",
         "test": "tsc -p ./ && node ./out/test/runTest.js",
         "test-compile": "tsc -p ./"
